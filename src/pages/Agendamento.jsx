@@ -78,8 +78,8 @@ export const Agendamento = () => {
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-white mb-2">Solicitar ser Paciente</h1>
-        <p className="text-white/70">Escolha um psicólogo e descreva sua necessidade de atendimento</p>
+        <h1 className="text-3xl font-bold text-dark mb-2">Solicitar ser Paciente</h1>
+        <p className="text-dark/70">Escolha um psicólogo e descreva sua necessidade de atendimento</p>
       </div>
  
       <Card>

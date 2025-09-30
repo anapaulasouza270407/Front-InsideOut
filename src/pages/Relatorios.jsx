@@ -95,7 +95,7 @@ export const Relatorios = () => {
                   <XAxis dataKey="month" />
                   <YAxis />
                   <Tooltip />
-                  <Bar dataKey="sessions" fill="#80eaf5" />
+                  <Bar dataKey="sessions" fill="#F2911B" />
                 </BarChart>
               </ResponsiveContainer>
             </Card>

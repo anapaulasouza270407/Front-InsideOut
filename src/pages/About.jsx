@@ -4,6 +4,7 @@ import { Button } from '../components/Button'; // Importa um botão reutilizáve
 import { ShieldCheck, Target, Award, Scale, PersonStanding, Bot, Zap, Calendar, Activity, FileText, LogOut, LucideFileCog2 } from 'lucide-react'; // Biblioteca de ícones SVG
 
 // Componente funcional "About"
+
 export const About = () => {
   // Array que define os valores da empresa/plataforma
   const values = [

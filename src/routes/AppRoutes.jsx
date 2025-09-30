@@ -153,14 +153,11 @@ export const AppRoutes = () => {
                         <PacienteDetalhes />
                     </ProtectedRoute>
                 } />
-                 <Route path="/sessao/:sessionid" element={
+                 <Route path="/sessao/:sessionId" element={
                     <ProtectedRoute>
                         <SessaoDetalhes />
                     </ProtectedRoute>
                 } />
-        
-        
-
                 {/* Página 404 */}
                 <Route path="*" element={<NotFound />} />
             </Routes>

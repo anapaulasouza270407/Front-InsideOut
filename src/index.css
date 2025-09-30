@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
 @import "tailwindcss"; /* Importa todas as utilidades do TailwindCSS */
 
 /* ==============================
@@ -8,7 +9,7 @@
   --color-dark: #0A578F;       /* Azul bem escuro */
   --color-medium: #2A678C;     /* Azul médio */
   --color-light: #F2911B;      /* laranja */
-  --color-accent: #ffbd59;     /* branco */
+  --color-accent: #ffbd59;     /* laranja claro*/
   --color-background: #F2eee9; /* laranja claro para fundo */
   --color-darkness: #36454f; /*cinza escuro*/
 
@@ -67,7 +68,7 @@
    Estilo global do body
    ============================== */
    body {
-    font-family: 'Inter', 'Nunito', 'Roboto', sans-serif, 'Chau Philomene One'; /* Fontes */
+    font-family:  'Montserrat','Chau Philomene One', sans-serif, ; /* Fontes */
     font-weight: 500; /* Peso médio */
     background: linear-gradient(
       135deg,

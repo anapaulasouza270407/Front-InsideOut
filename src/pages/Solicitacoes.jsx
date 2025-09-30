@@ -245,7 +245,7 @@ export const Solicitacoes = () => {
                 <Button
                   onClick={() => handleAcceptRequest(request.id, request)}
                   loading={processingRequests.has(request.id)}
-                  className="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white"
+                  className="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-darkness"
                 >
                   <CheckCircle className="w-4 h-4" />
                   Aceitar como Paciente
