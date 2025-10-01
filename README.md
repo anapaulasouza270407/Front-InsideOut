@@ -1,4 +1,4 @@
-# 🧠InsideOUt - Sistema de Agendamento Psicológico
+# 🧠InsideOut - Sistema de Agendamento Psicológico
  
 Plataforma digital que otimiza o agendamento e a gestão de atendimentos psicológicos voluntários, com foco em acessibilidade e inclusão...
  
