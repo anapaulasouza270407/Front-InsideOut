@@ -31,7 +31,7 @@ export const PublicNavbar = () => {
                             <span className=" text-xl font-bold text-background md:text-2xl">
                                 insideout
                             </span>
-                            <p className="text-xs text-background/80 font-medium hidden sm:block">
+                            <p className="text-xs text-background/80 font-bold hidden sm:block">
                                 Sistema Psicologico
                             </p>
                         </div>
@@ -75,7 +75,7 @@ export const PublicNavbar = () => {
         {/*Menu mobile aberto isopen = true */}
         {isOpen && (
             <div className="md:hidden mt-4">
-                <div className="px-2 pt-2 pb-2 space-y-1 bg-white/80 backdrop:blur-md rounded-lg">
+                <div className="px-2 pt-2 pb-2 space-y-1 bg-white backdrop:blur-md rounded-lg">
                     {navLink.map(link =>(
                         <Link
                         key={link.to}
@@ -83,7 +83,7 @@ export const PublicNavbar = () => {
                         className= {`block px-3 rounded-lg transition-colors ${
                             isActive(link.to)
                             ? 'text-light bg-light/10 font-medium'
-                            : 'text-background hover:text-accent hover:bg-light/5'
+                            : 'text-dark font-bold hover:text-accent hover:bg-light/5'
                         }`}
                         onClick={() => setIsOpen(false)}
                         >

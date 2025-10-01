@@ -139,7 +139,7 @@ export const DashboardPsicologo = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <PatientListCard patients={patients} />
  
-          <div className="rounded-lg p-6">
+          <div className="rounded-lg bg-white bg-white rounded-lg shadow-md p-6 text-center border-2not-last-of-type:p-6">
             <h2 className="text-xl font-semibold text-dark mb-4">Próximos Agendamentos</h2>
             {upcomingAppointments.length === 0 ? (
               <Card className="text-center py-8">

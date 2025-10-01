@@ -4,7 +4,6 @@ import { useAuth } from "../context/AuthContext";
 import { mockApi } from "../services/mockApi";
 import { Input } from "../components/Input";
 import { Button } from "../components/Button";
-import { Card } from "../components/Card";
 import toast from "react-hot-toast";
 
 export const Login = () => {
@@ -33,12 +32,10 @@ export const Login = () => {
     };
 
     return (
-        <div className="relative min-h-[calc(100vh-80px)] flex items-center justify-between p-8">
+        <div className="relative min-h-[calc(100vh-80px)] flex flex-col md:flex-row items-center justify-center md:justify-between p-8">
 
-       
-
-            {/* Imagem decorativa esquerda */}
-            <div className="flex-shrink-0 w-80 h-80 overflow-hidden mb-100">
+            {/* Imagem decorativa esquerda (só no desktop) */}
+            <div className="hidden md:flex flex-shrink-0 w-80 h-80 overflow-hidden mb-100">
                 <img
                     src="/loginbg2.png"
                     alt="Imagem decorativa"
@@ -47,7 +44,7 @@ export const Login = () => {
             </div>
 
             {/* Card de Login */}
-            <div className="flex flex-col items-center justify-center w-full max-w-md mx-12">
+            <div className="flex flex-col items-center justify-center w-full max-w-md mx-0 md:mx-12 my-8 md:my-0">
                 <div className="glassmorphism shadow-lg w-full overflow-hidden rounded-2xl">
 
                     {/* Cabeçalho */}
@@ -99,8 +96,8 @@ export const Login = () => {
                 </div>
             </div>
 
-            {/* Imagem decorativa direita */}
-            <div className="flex-shrink-0 w-80 h-80 overflow-hidden mt-120">
+            {/* Imagem decorativa direita (só no desktop) */}
+            <div className="hidden md:flex flex-shrink-0 w-80 h-80 overflow-hidden mt-120">
                 <img
                     src="/loginbg.png"
                     alt="Imagem decorativa"
@@ -108,6 +105,5 @@ export const Login = () => {
                 />
             </div>
         </div>
-
     );
 };
