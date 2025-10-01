@@ -31,7 +31,7 @@ export const PublicNavbar = () => {
                             <span className=" text-xl font-bold text-background md:text-2xl">
                                 insideout
                             </span>
-                            <p className="text-xs text-background/80 font-bold hidden sm:block">
+                            <p className="text-[1rem] text-background/80 font-bold hidden sm:block">
                                 Sistema Psicologico
                             </p>
                         </div>
@@ -51,7 +51,7 @@ export const PublicNavbar = () => {
                             </Link>
                         ))}
                         <Link to="/login">
-                            <button className="bg-gradient-to-r from-light to-accent text-white px-3 py-2 md:px-4 rounded-lg font-medium hover:shadow-lg transition-all duration-300 text-sm md:text-base">
+                            <button className="bg-gradient-to-r from-light to-accent text-white  px-3 py-2 md:px-4 rounded-lg font-medium hover:shadow-lg transition-all duration-300 text-sm md:text-base">
                                 <span className="hidden sm:inline">
                                     Entrar
                                 </span>
