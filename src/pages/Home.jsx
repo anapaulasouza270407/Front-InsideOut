@@ -9,19 +9,19 @@ export const Home = () => {
 
 // Lista de problemas que a plataforma busca resolver
 const problems = [
-  'Falta de controle e organização nos agendamentos', 
-  'Dificuldade de busca psicólogos dispostos a realizar acompanhamentos voluntários',
-  'Impossibilidade de mapear perfis de risco com dados',
-  'Ausência de ferramentas de análise e acompanhamento'
+  'Gestão ineficaz e falta de clareza na marcação de horários', 
+  'Escassez de psicólogos para participar de programas de apoio voluntário',
+  'Limitação na análise de dados para mapear riscos',
+  'Inexistência de soluções para análise e supervisão'
 ];
 
 // Lista de soluções propostas
 const solutions = [
-  'Sistema digital centralizado com agendamento automatizado',
-  'Registro estruturado e seguro de todas as sessões',
-  'Painel administrativo com visão completa da agenda',
-  'Machine Learning para agrupamento de perfis comportamentais',
-  'Interface responsiva, acessível e emocionalmente confortável'
+  'Ferramenta digital integrada com gerenciamento de agendamentos automatizado',
+  'Arquivo estruturado com proteção de todas as sessões',
+  'Interface de controle com visão completa dos horários',
+  'Análise automatizada de perfis comportamentais por meio de Machine Learning',
+  'Plataforma intuitiva, acessível e pensada para bem-estar emocional'
 ];
 
   return (
