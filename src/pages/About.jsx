@@ -11,22 +11,22 @@ export const About = () => {
     {
       icon: <ShieldCheck className="w-12 h-12 text-light" />, // Ícone estilizado com cor e tamanho
       title: 'Segurança',
-      description: 'Proteção rigorosa com dados sensíveis de pacientes'
+      description: 'Cuidado rigoroso com dados confidenciais de saúde'
     },
     {
       icon: <PersonStanding className="w-12 h-12 text-dark" />,
       title: 'Acessibilidade',
-      description: 'Interface acolhedora, responsiva e compatível com tecnologias assistivas'
+      description: 'Ambiente digital intuitivo, responsivo e acessível'
     },
     {
       icon: <Bot className="w-12 h-12 text-light" />,
       title: 'Chat AI',
-      description: 'Machine Learning para identificar padrões emocionais e apoiar decisões clínicas'
+      description: 'Soluções de IA para compreender emoções e reforçar o processo clínico'
     },
     {
       icon: <Scale className="w-12 h-12 text-dark" />,
       title: 'Equilibrío',
-      description: 'Focamos em projetos voluntários que promovem saúde mental para comunidades vulneráveis'
+      description: 'Nosso foco está em ações voluntárias que promovem saúde mental para grupos em vulnerabilidade'
     }
   ];
 
@@ -35,22 +35,22 @@ export const About = () => {
     {
       icon: <Calendar className="w-5 h-5 text-dark" />,
       title: 'Agendamento Dinâmico',
-      description: 'Sistema automatizado com visualização de horários disponíveis e lembretes por e-mail'
+      description: 'Sistema inteligente para visualizar agendas disponíveis e disparar notificações por e-mail'
     },
     {
       icon: <Activity className="w-5 h-5 text-dark" />,
       title: 'Análise Preditiva',
-      description: 'Algoritmos de clustering para agrupar perfis de pacientes e identificar riscos emocionais'
+      description: 'Técnicas de agrupamento aplicadas à análise de perfis e identificação de vulnerabilidades emocionais'
     },
     {
       icon: <FileText className="w-5 h-5 text-dark" />,
       title: 'Histórico Completo',
-      description: 'Registro estruturado de sessões com temas, recomendações e evolução do tratamento'
+      description: 'Registro sistematizado de encontros, incluindo temas abordados, recomendações e evolução clínica'
     },
     {
       icon: <Zap className="w-5 h-5 text-dark" />,
       title: 'Interface Intuitiva',
-      description: 'Design pensado para conforto emocional com navegação simples e acolhedora'
+      description: 'Design voltado ao conforto psicológico, oferecendo uma experiência simples e amigável'
 
     }
   ];
