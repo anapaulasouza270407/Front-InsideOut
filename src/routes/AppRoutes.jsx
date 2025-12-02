@@ -20,14 +20,20 @@ import { NotFound } from '../pages/NotFound';
 // Páginas protegidas (apenas para usuários autenticados)
 import { DashboardPsicologo } from '../pages/DashboardPsicologo';
 import { DashboardPaciente } from '../pages/DashboardPaciente';
+import { Solicitacoes } from '../pages/Solicitacoes';
 import { Agendamento } from '../pages/Agendamento';
 import { ChatIA } from '../pages/ChatIA';
+import { Agendamento } from '../pages/Agendamento';
+
+/*
+
+import { ChatIA } from '../pages/ChatIA';
 import { Relatorios } from '../pages/Relatorios';
-import { Solicitacoes } from '../pages/Solicitacoes';
+
 import { Pacientes } from '../pages/Pacientes';
 import { PacienteDetalhes } from '../pages/PacienteDetalhe';
 import { SessaoDetalhes } from '../pages/SessaoDetalhes';
-
+*/
 
 
 /* ==============================
@@ -118,14 +124,31 @@ export const AppRoutes = () => {
                 {/* ==============================
            Rotas Protegidas
            ============================== */}
-                <Route path="/dashboard" element={
+           
+                 <Route path="/dashboard" element={
                     <ProtectedRoute>
-                        <Dashboard /> {/* Escolhe dashboard de psicólogo ou paciente */}
+                        <Dashboard /> 
                     </ProtectedRoute>
                 } />
-                <Route path="/agendamento" element={
+                  <Route path="/chat-ia" element={
                     <ProtectedRoute>
-                        <Agendamento /> {/* Escolhe agendamento de psicólogo ou paciente */}
+                        <ChatIA /> 
+                    </ProtectedRoute>
+                } />
+                  <Route path="/agendamento" element={
+                    <ProtectedRoute>
+                        <Agendamento /> 
+                    </ProtectedRoute>
+                } />
+                  <Route path="/solicitacoes" element={
+                    <ProtectedRoute>
+                        <Solicitacoes /> 
+                    </ProtectedRoute>
+                } />
+
+               {/* <Route path="/agendamento" element={
+                    <ProtectedRoute>
+                        <Agendamento />
                     </ProtectedRoute>
                 } />
                 <Route path="/chat-ia" element={
@@ -157,7 +180,8 @@ export const AppRoutes = () => {
                     <ProtectedRoute>
                         <SessaoDetalhes />
                     </ProtectedRoute>
-                } />
+                } /> 
+
                 {/* Página 404 */}
                 <Route path="*" element={<NotFound />} />
             </Routes>

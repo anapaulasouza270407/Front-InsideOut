@@ -8,72 +8,76 @@ import { Bell } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { CampoDeDescricao } from '../components/CampoDeDescricao';
 import { ConfirmationModal } from '../components/ConfirmationModal';
- 
+import { psychologistService, requestService } from '../services/apiService';
+
 export const Agendamento = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
- 
   const [selectedPsychologist, setSelectedPsychologist] = useState('');
   const [psychologists, setPsychologists] = useState([]);
   const [submitting, setSubmitting] = useState(false);
-  const [selectedDates, setSelectedDates] = useState([]);
   const [requestData, setRequestData] = useState({
     description: '',
     urgency: 'media'
   });
- 
-  const [modalVisible, setModalVisible] = useState(false);
- 
   useEffect(() => {
     loadPsychologists();
   }, []);
  
   const loadPsychologists = async () => {
     try {
-      const data = await mockApi.getPsychologists();
+      const data = await psychologistService.getPsychologists();
       setPsychologists(data);
     } catch {
       toast.error('Erro ao carregar psicólogos');
     }
   };
  
-  const handleRequestSubmit = (e) => {
+  const handleRequestSubmit = async (e) => {
     e.preventDefault();
- 
     if (!selectedPsychologist || !requestData.description) {
       toast.error('Selecione um psicólogo e descreva sua necessidade');
       return;
     }
- 
-    setModalVisible(true);
-  };
- 
-  const handleConfirm = async () => {
-    setModalVisible(false);
     setSubmitting(true);
- 
+   
     try {
-      await mockApi.createRequest({
-        patientName: user.name,
-        patientEmail: user.email,
-        patientPhone: user.phone || '(11) 99999-9999',
-        preferredPsychologist: parseInt(selectedPsychologist),
-        description: requestData.description,
-        urgency: requestData.urgency
+      // ===== ENVIO PARA API =====
+      // Monta objeto com todos os dados necessários
+      // ESTRUTURA: Combina dados do usuário logado + dados do formulário
+      await requestService.createRequest({
+        patient_id: user.id,
+        patient_name: user.name,           // Do contexto de autenticação
+        patient_email: user.email,         // Do contexto de autenticação
+        patient_phone: user.phone || '(11) 99999-9999', // Fallback se não tiver telefone
+        preferred_psychologist: parseInt(selectedPsychologist), // Converte string para número
+        description: requestData.description,  // Do estado do formulário
+        urgency: requestData.urgency,          // Do estado do formulário
+        preferred_dates: [],
+        preferred_times: []
       });
- 
+     
+      // ===== SUCESSO =====
+      // Mostra feedback positivo
       toast.success('Solicitação enviada! O psicólogo avaliará e entrará em contato se aceitar você como paciente.');
+     
+      // Redireciona para dashboard
+      // PORQUE: Fluxo natural após completar ação
       navigate('/dashboard');
+     
     } catch {
+      // ===== ERRO =====
+      // Qualquer erro (rede, servidor, validação) cai aqui
+      // UX: Usuário sabe que algo deu errado
       toast.error('Erro ao enviar solicitação');
     } finally {
+      // ===== CLEANUP =====
+      // SEMPRE executa, independente de sucesso ou erro
+      // PORQUE: Precisamos desativar loading em qualquer caso
       setSubmitting(false);
     }
   };
  
-  const handleCancel = () => {
-    setModalVisible(false);
-  };
  
   return (
     <div className="max-w-2xl mx-auto space-y-6">
