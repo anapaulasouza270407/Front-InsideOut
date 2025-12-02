@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { mockApi } from '../services/mockApi';
 import { Card } from '../components/Card';
 import { Button } from '../components/Button';
 import { Bell } from 'lucide-react';
@@ -56,29 +55,15 @@ export const Agendamento = () => {
         preferred_dates: [],
         preferred_times: []
       });
-     
-      // ===== SUCESSO =====
-      // Mostra feedback positivo
       toast.success('Solicitação enviada! O psicólogo avaliará e entrará em contato se aceitar você como paciente.');
-     
-      // Redireciona para dashboard
-      // PORQUE: Fluxo natural após completar ação
       navigate('/dashboard');
-     
     } catch {
-      // ===== ERRO =====
-      // Qualquer erro (rede, servidor, validação) cai aqui
-      // UX: Usuário sabe que algo deu errado
       toast.error('Erro ao enviar solicitação');
     } finally {
-      // ===== CLEANUP =====
-      // SEMPRE executa, independente de sucesso ou erro
-      // PORQUE: Precisamos desativar loading em qualquer caso
       setSubmitting(false);
     }
   };
- 
- 
+
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       <div className="text-center">

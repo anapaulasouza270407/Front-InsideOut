@@ -23,7 +23,7 @@ import { DashboardPaciente } from '../pages/DashboardPaciente';
 import { Solicitacoes } from '../pages/Solicitacoes';
 import { Agendamento } from '../pages/Agendamento';
 import { ChatIA } from '../pages/ChatIA';
-import { Agendamento } from '../pages/Agendamento';
+
 
 /*
 
